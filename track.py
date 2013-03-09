@@ -47,9 +47,9 @@ def main(argv):
 		sys.exit(2)
 
 	print "Connecting to FTP"	
-	ftp = FTP('atverts.lv')
+	ftp = FTP(host)
 	print "Logging into FTP"
-	ftp.login('rz', 'skudra')
+	ftp.login(username, password)
 	ftp.cwd('public_html')
 	print "Testing connection"
 	ftp.dir()
